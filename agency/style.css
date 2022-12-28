@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+.wrapper {
+  min-height: 129vh;
+  background: #eef4ff;
+}
+header {
+  position: relative;
+}
+.header__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+}
+.header__links h1 {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  color: #3e3fd8;
+}
+.header__links a {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #61646b;
+}
+
+.header__links button {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3e3fd8;
+  width: 170px;
+  height: 60px;
+  left: 950px;
+  top: 0px;
+  background: #eef4ff;
+  border-radius: 20px;
+  border: none;
+  z-index: 1;
+}
+
+.blue__bg {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.pink__bg {
+  position: absolute;
+  top: 120px;
+  right: 200px;
+}
+.man__bg {
+  position: absolute;
+  top: 65px;
+  right: 150px;
+  z-index: 2;
+}
+.text__content {
+  display: flex;
+}
+.text__content {
+  margin: 40px 20px 0 20px;
+  width: 670px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text__wrapper h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 92px;
+  color: #2e323b;
+  width: 550px;
+  margin: 40px 0 20px 0px;
+}
+.text__wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #61646b;
+  width: 400px;
+}
+.text__content button {
+  width: 170px;
+  height: 60px;
+  left: 190px;
+  top: 610px;
+  background: #3e3fd8;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #eef4ff;
+}
+.header__bottom {
+  display: flex;
+  align-items: center;
+}
+.text__content > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.text__content > div:nth-child(3) {
+  width: 269px;
+  height: 120px;
+  background: #eef4ff;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+}

@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #e5e5e5;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 10vh 1fr;
+}
+h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #899bbe;
+}
+.header,
+.main,
+.aside,
+.main > div {
+  padding: 20px;
+}
+.header {
+  grid-column: 1/4;
+  box-shadow: 0px 3px 8px rgba(9, 25, 55, 0.12);
+  z-index: 1;
+  justify-content: space-between;
+}
+.header > div,
+.header > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.h-left {
+  width: 45%;
+}
+.h-left img {
+  margin-right: 10px;
+}
+.h-right {
+  width: 20%;
+}
+.h-right select {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+.h-input {
+  width: 340px;
+  height: 40px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  justify-content: space-around;
+}
+.h-input input {
+  background: #f5f7fa;
+  border: none;
+  outline: none;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10vh 187px 344px 210px;
+  grid-template-areas:
+    "o o o o o o o o o o o o"
+    "n n n n n n i i i e e e"
+    "p p p p p p p p a a a a"
+    "t t t t t t t t a a a a";
+  gap: 20px;
+}
+.main > div {
+  border-radius: 8px;
+}
+.header,
+.aside,
+.main > div {
+  background: #ffffff;
+}
+/* ! aside css */
+.aside {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 0 42px;
+}
+.aside img {
+  margin: 0 20px;
+}
+.aside > div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 232px;
+}
+.aside a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2c384f;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.aside button,
+.aside a {
+  margin-bottom: 29px;
+}
+.aside__links button:first-child {
+  width: 232px;
+  height: 70px;
+  background: #784ffe;
+  border-radius: 8px;
+  border: none;
+  justify-content: space-around;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.aside__links button:nth-child(2) {
+  width: 232px;
+  height: 54px;
+  background: rgba(120, 79, 254, 0.12);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #784ffe;
+}
+
+/* !overview css */
+
+.overview {
+  grid-area: o;
+  background: none !important;
+  display: flex;
+  justify-content: space-between;
+}
+.overview h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #2c384f;
+}
+.overview a {
+  text-decoration: none;
+  width: 124px;
+  height: 38px;
+  background: #724bf2;
+  border-radius: 12px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* !netWorth css */
+
+.netWorth {
+  grid-area: n;
+  justify-content: space-between;
+}
+.netWorth > img {
+  width: 45%;
+  margin-top: 50px;
+}
+
+.price {
+  margin: 5px 0 22px;
+}
+.price > span,
+.income > div > div:first-child span,
+.expenses > div > div:first-child span {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2c384f;
+  margin-right: 5px;
+}
+.price > div > span,
+.income > div > div > span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #20bf6b;
+}
+.btn button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btn button:first-child {
+  width: 94px;
+  height: 38px;
+  background: #724bf2;
+  border-radius: 12px;
+  border: none;
+  margin-right: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+}
+.btn button:last-child {
+  width: 94px;
+  height: 38px;
+  background: #ece6ff;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2c384f;
+}
+
+/* !income css , expenses css*/
+.income,
+.expenses {
+  grid-area: i;
+  position: relative;
+}
+.income > div,
+.expenses > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.income > img,
+.expenses > img {
+  width: 57%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.income > div > div:last-child,
+.expenses > div > div:last-child {
+  margin-bottom: 45px;
+}
+.income > div > div:first-child,
+.expenses > div > div:first-child {
+  margin-top: 9px;
+}
+.expenses {
+  grid-area: e;
+}
+.expenses > div > div > span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #eb3b5a;
+}
+/* !portfolio css */
+
+.portfolio {
+  grid-area: p;
+}
+.portfolio_h {
+  justify-content: space-between;
+}
+.portfolio_h_logo img {
+  margin-right: 10px;
+}
+.portfolio_h a {
+  width: 97px;
+  height: 38px;
+  background: #efebff;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2c384f;
+  text-decoration: none;
+  justify-content: space-evenly;
+}
+.portfolio_content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.portfolio_content_price {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  margin-bottom: 40px;
+}
+.portfolio_dash {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  padding: 22px 0 0 17px;
+}
+.portfolio_dash > p {
+  border: 1px dashed rgba(44, 56, 79, 0.3);
+  width: 100%;
+}
+.portfolio_content_diagramm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.p-f-img{
+position: absolute;
+top: 50px;
+left: 95px;
+}
+.p-s-img{
+  width: 100%;
+position: absolute;
+bottom: 67px;
+}
+.allAssets {
+  grid-area: a;
+}
+.transactions {
+  grid-area: t;
+}

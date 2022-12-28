@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="circle">
+            <div style="--i:10"></div>
+            <div style="--i:13"></div>
+            <div style="--i:12"></div>
+            <div style="--i:13"></div>
+            <div style="--i:15"></div>
+            <div style="--i:16"></div>
+            <div style="--i:17"></div>
+            <div style="--i:12"></div>
+            <div style="--i:23"></div>
+            <div style="--i:55"></div>
+            <div style="--i:23"></div>
+            <div style="--i:24"></div>
+            <div style="--i:45"></div>
+            <div style="--i:65"></div>
+            <div style="--i:34"></div>
+            <div style="--i:23"></div>
+            <div style="--i:12"></div>
+            <div style="--i:45"></div>
+            <div style="--i:5"></div>
+            <div style="--i:23"></div>
+            <div style="--i:12"></div>
+            <div style="--i:14"></div>
+            <div style="--i:45"></div>
+            <div style="--i:23"></div>
+            <div style="--i:11"></div>
+            <div style="--i:23"></div>
+            <div style="--i:34"></div>
+            <div style="--i:31"></div>
+            
+            
+        </div>
+    </div>
+    <a style="--clr: #ff1816" href="#">
+      <span>Click me</span>
+    </a>
+    <a style="--clr: rgba(17, 212, 64, 0.8)" href="#">
+      <span>Click me</span>
+    </a>
+    <a style="--clr: rgba(191, 14, 145, 0.8)" href="#">
+      <span>Click me</span>
+    </a>
+  </body>
+</html>
+
+
+<!-- 
+<FormInput
+  className={styles.inputForm}
+  placeholder="Иванов Иван"
+  name='nameinput'
+  nameinput='Имя*'
+  required
+/>
+<FormInput
+  className={styles.inputForm}
+  placeholder="10.05.2022"
+  name='date'
+  nameinput="Дата рождения"
+  type="date"
+  required
+/>
+<p>Намер вашего телефона*</p>
+<PhoneInput
+  onChange={handlePhone}
+  name="phoneNumber"
+  type="text"
+  country={'kg'}
+  enableAreaCodes={true}
+  inputProps={{
+    name: 'phone',
+    country: 'us',
+    required: true,
+    autoFocus: false,
+  }}
+  // Set your inline styles here
+  containerStyle={{
+    width: '75%',
+    height: '60px',
+    background: '#FFFFFF',
+    borderRadius: '10px',
+    boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.1)',
+  }}
+  inputStyle={{
+    height: '100%',
+    width: '100%',
+    background: '#fff',
+    border: 'none',
+    fontSize: '14px',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '10px',
+    color: '#0097db',
+  }}
+  buttonStyle={{
+    background: '#fff',
+    border: 'none',
+    borderRadius: '10px',
+    fontSize: '10px',
+  }}
+  dropdownStyle={{
+    fontSize: '10px',
+  }}
+  placeholder="(999) 999-999"
+  required
+/>
+<FormInput
+  className={styles.inputRange}
+  nameinput="Укажите уровень боли"
+  type="range"
+  id="vol"
+  name="vol"
+  min="0"
+  max="10"
+  step='1'
+/>
+<p>Опишите свои жалобы</p>
+<textarea
+  placeholder="Онемение руки, боль в плече, приступы головной боли..."
+  type="textarea"
+  name='textarea'
+/>
+<p>Опишите свои жалобы</p>
+<div className={styles.radioInputs}>
+  <p>Когда возобновились или начались боли?</p>
+  <div>
+    <FormInput name='inOneMonth' nameinput="в течение месяца" type="radio" value="в течение месяца" onChange={ handleChange} checked={radioInput==='в течение месяца'} />
+  </div>
+  <div>
+    <FormInput name='threeMonth' nameinput="в течение 3х месяцев" type="radio" value="в течение 3х месяцев"onChange={ handleChange} checked={radioInput==='в течение 3х месяцев'}/>
+  </div>
+  <div>
+    <FormInput name='halfYear' nameinput="полгода" type="radio" value="полгода" onChange={ handleChange}checked={radioInput==='полгода'}/>
+  </div>
+  <div>
+    <FormInput name='year' nameinput="год" type="radio" value="год"onChange={ handleChange}checked={radioInput==='год'} />
+  </div>
+  <div>
+    <FormInput name='moreYear' nameinput="больше года" type="radio" value="больше года" onChange={ handleChange}checked={radioInput==='больше года'}/>
+  </div>
+  <p>Делали ли вы блокады?</p>
+  <div>
+    <FormInput name='yes' nameinput="да" type="radio" value="да"onChange={ handleChangeYesNo}checked={radioYesNo==='да'} />
+  </div>
+  <div>
+    <FormInput name='no' nameinput="нет" type="radio" value="нет" onChange={ handleChangeYesNo}checked={radioYesNo==='нет'}/>
+  </div>
+</div>
+<div className={styles.mrtZip}>
+  <p>Прикрепить снимки МРТ в архиве ZIP, следуя инструкции ниже:</p>
+  <ul>
+    <li>Вставьте CD-диск с исследованием в дисковод</li>
+    <li>У вас на экране монитора автоматически откроется его содержимое</li>
+    <li>
+      Нажмите правой кнопкой на папку "DICOM" и выберете «копировать» вставляем папку на
+      рабочий стол нажимаем <b>правой кнопкой на папку и выбираем «Добавить в архив…»</b>{' '}
+    </li>
+    <li>выбираем zip и нажимаем готово</li>
+  </ul>
+</div>
+<div className={styles.videoInstructions}>
+  <p>
+    <b>Видеоинструкция «Как создать архив со снимками МРТ?»</b>
+  </p>
+  {/* <iframe
+    title="video"
+    src="https://youtube.com/embed/xMM7JmIgrSk?rel=0&fmt=18&html5=1&showinfo=0"></iframe> */}
+  <img src="/images/OnlineConsultationFormVideoCard.png" alt="Form video" />
+</div>
+<p>Прикрепите архив вашего МРТ-исследования (непосредственно запись на диске)</p>
+<div className={styles.fileInput}>
+  <FormInput name='file' className={styles.fileInput} type="file" />
+</div>
+<button className="btn btn-big-bg">Отправить</button> -->
